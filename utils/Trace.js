@@ -6,7 +6,7 @@ class Trace {
   }
 
   static error(error) {
-    console.error(error);
+    console.error(`[${moment().format('LTS')}] >> ${error}`);
   }
 }
 
