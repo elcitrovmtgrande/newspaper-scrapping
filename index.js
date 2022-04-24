@@ -33,7 +33,6 @@ const scrap = async () => {
     Trace.info('Attente du chargement complet de la nouvelle page...');
     await page.waitForNavigation();
 
-    // Récupération de tous les titres
     Trace.info('Récupération de tous les titres et liens de la page...');
     const articles = await page.evaluate(() => Array.from(document.querySelectorAll('.thumbnail__title.headline--lg a'), (e) => ({
       title: e.innerText,
